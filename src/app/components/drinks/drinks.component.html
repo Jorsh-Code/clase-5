@@ -1,0 +1,13 @@
+<!-- <div *nfIf="requestService.getData('margarita') | async as data">
+    {{ data | json }}
+</div> -->
+
+<div *ngFor="let  drink of drinks" style="margin: auto;text-align: center;">
+<span>{{drink.name}}</span><br>
+<img [src]="drink.img" alt="photo" width="300" height="300"><br>
+<div *ngFor="let ingredient of drink.ingredients">
+    <li>{{ ingredient }}</li>
+</div>
+<br>
+
+</div>

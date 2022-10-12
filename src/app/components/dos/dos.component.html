@@ -1,0 +1,11 @@
+<!-- <div *ngIf="infoService.data$ | async as info">{{ info | json }}</div> -->
+<form *ngIf="infoService.data$ | async as info">
+    <label for="name">Nombre: </label>
+    <input type="text" name="name" [value]="info?.name">
+    <label for="password">Contraseña:</label>
+    <input type="text" name="password" [value]="info?.password">
+</form>
+
+<ng-container *ngIf="detector$">
+
+</ng-container>
